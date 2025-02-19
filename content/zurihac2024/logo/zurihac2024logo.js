@@ -372,7 +372,7 @@ function zurihac2024logo(scheme) {
             return point([xy[0], xy[1], 0]);
         });
     });
-    const fonth = 0.18;
+    const fonth = 0.25;  // 0.25 connects it to model
     const glyphs = font(fonth);
     return glue([
         front,
@@ -403,7 +403,7 @@ function zurihac2024logo(scheme) {
         color(
             frontcol,
             function(point) {
-                return text(glyphs, "zurihac'24", 1, function(p) {
+                return text(glyphs, "zurihac", 1, function(p) {
                     return point([1, 1 - fonth + p[1], p[0]]);
                 });
             }
